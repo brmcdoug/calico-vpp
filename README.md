@@ -76,7 +76,7 @@ kubectl exec -it alpine /bin/sh
 ping 10.2.3.1 -i .4
 ```
 
-11. tcpdump on calico-vpp VM outside NIC to see if packets are encapsulated in SRv6:
+11. tcpdump on calico-vpp VM outside NIC to see if packets are encapsulated in SRv6...note that with the SRv6 policy in place the CNI does not NAT the source IPv4 address:
 ```
 admin@sonic01:~$ sudo tcpdump -ni Ethernet16
 tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
